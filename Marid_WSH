@@ -1,0 +1,9 @@
+import base64 
+encoded = 'BR3tCNDUzXzYxWDdZXzRSfQ=='
+baseAlpanum= 'ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
+
+for i in range (64):
+    for j in range(64):
+        r = 'R'+ baseAlpanum[i] + baseAlpanum[j] + encoded
+        decoded = base64.b64decode(r)
+        print(decoded)
